@@ -26,5 +26,15 @@ namespace Angarola.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Brands()
+        {
+            return View();
+        }
+
+        public ActionResult Calendar()
+        {
+            return View();
+        }
     }
 }
