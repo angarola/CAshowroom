@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Angarola.Web.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [RoutePrefix("admin")]
     public class AdminController : Controller
     {
