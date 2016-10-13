@@ -1,5 +1,6 @@
-﻿body {
-    padding-top: 50px;
+﻿
+body {
+    padding-top: 25px;
     padding-bottom: 20px;
 }
 
@@ -27,6 +28,106 @@ textarea {
     display: inline-block;
     float: none;
 }
+
 .navbar .navbar-collapse {
     text-align: center;
+}
+
+@font-face {
+    font-family: 'futura-medium';
+    src: url('../fonts/futura-medium.ttf') format('truetype');
+}
+
+.nav li a {
+    font-family: futura-medium;
+    font-size: 1.5em;
+}
+
+i {
+    font-size: 1.5em;
+    color: #1a1a1a;
+}
+
+.contact-text, .about-text, .brand-text {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.2em;
+    color: #404040;
+}
+
+.brand-title {
+    font-family: futura-medium;
+    font-size: 2.5em;
+    color: #404040;
+    margin-top: .5em;
+}
+
+.contact-link {
+    text-decoration: underline;
+}
+
+
+.slickImage {
+        max-height: 500px;
+    }
+
+@media (max-width: 480px) {
+    .slickImage {
+        max-height: 250px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .slickImage {
+        max-height: 350px;
+    }
+}
+
+.contact-name {
+    color: #404040;
+    font-size: 1.7em;
+}
+
+
+@font-face {
+    font-family: 'slick';
+    src: url('../fonts/slick.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'slick';
+    src: url('../fonts/slick.woff') format('woff');
+}
+
+footer {
+    margin-top: 35px;
+    font-family: futura-medium;
+    /*color: #959595;*/
+}
+
+.brand-link {
+    font-family: futura-medium;
+    font-size: 1.5em;
+}
+
+/* Footer displays mobile vs desktop */
+
+@media (max-width: 767px) {
+    .footer-desktop {
+        display: none !important;
+    }
+
+    .footer-mobile {
+        display: initial !important;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .footer-mobile {
+        display: none !important;
+    }
 }

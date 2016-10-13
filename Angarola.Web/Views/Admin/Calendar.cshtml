@@ -4,5 +4,48 @@
     ViewBag.Title = "Calendar";
 }
 
-<h2>Calendar</h2>
+<div ng-controller="calendarController as calendarCtlr">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="" name="calendarCtlr.form" class="" style="">
+                            <div class="form-group">
+                                <h3>Event Name</h3>
+                                <input type="text"
+                                       placeholder="Event Name"
+                                       name="eventName"
+                                       ng-model="calendarCtlr.newEvent.name"
+                                       required />
+                                <div role="alert" class="help-inline error">
+                                    <span class="error" ng-show="calendarCtlr.form.eventName.$touched && calendarCtlr.form.eventName.$error.required">
+                                        This field is required.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3>Event Dates</h3>
+                                <input type="text"
+                                       placeholder="Event Dates"
+                                       name="eventDates"
+                                       ng-model="calendarCtlr.newEvent.dates"
+                                       required/>
+                                <div role="alert" class="help-inline error">
+                                    <span class="error" ng-show="calendarCtlr.form.eventDates.$touched && calendarCtlr.form.eventDates.$error.required">
+                                        This field is required.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-primary" value="Submit" ng-click="calendarCtlr.submit()" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 

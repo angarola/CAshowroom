@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Calendar";
+}
+
+
+<div ng-controller="calendarController as calendarCtrl" ng-cloak>
+    @*<div class="col-sm-6">
+        <img style="width: 100%" src="http://cristinaangarola.com/wp-content/uploads/2015/01/calendar1.jpg" class="mobile-hide" />
+    </div>*@
+    <div class="col-sm-8 col-sm-offset-2">
+        <p class="contact-text">Join us at our upcoming events...</p>
+        <div ng-repeat="event in calendarCtrl.eventList">
+            <h3 class="contact-name" ng-bind="event.name"></h3>
+            <div class="contact-text" ng-bind="event.dates"></div>
+            <a href="mailto:cristina@cristinaangarola.com?Subject=I'd%20like%20to%20schedule%20an%20appointment%20">Schedule an appointment</a>
+        </div>
+    </div>
+</div>

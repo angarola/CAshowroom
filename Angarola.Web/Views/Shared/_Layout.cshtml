@@ -1,68 +1,95 @@
-﻿<!DOCTYPE html>
-<html ng-app="casAPP">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+﻿<DOCTYPE html>
+    <html ng-app="casAPP">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title</title>
+        <link rel="shortcut icon" type="image/ico" href="~/favicon.ico" />
+        <script src="~/Scripts/vendor/jquery-3.1.0.js"></script>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/Content/animation.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/6b351ce5e4.js"></script>
+        <link href="~/Content/slick.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="~/Content/slick-theme.css" rel="stylesheet" />
 
-</head>
-<body>
-    <div class="text-center">
-        <a href="/"><img src="https://cashowrooms.s3-us-west-1.amazonaws.com/CAshowroomLogo.png" /></a>
-    </div>
-    <div class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Brands", "Brands", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Calendar", "Calendar", "Home")</li>
-                </ul>
+    </head>
+    <body>
+        <div class="text-center">
+            <a href="/"><img src="https://cashowrooms.s3-us-west-1.amazonaws.com/CAshowroomLogo.png" /></a>
+        </div>
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Brands", "Index", "Brands")</li>
+                        <li>@Html.ActionLink("About", "Index", "About")</li>
+                        <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                        <li>@Html.ActionLink("Calendar", "Index", "Calendar")</li>
+                    </ul>
+                    @*@Html.Partial("_LoginPartial")*@
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
+        <div class="container body-content">
+            @RenderBody()
+        </div>
         <hr />
         <footer>
             <div class="row">
                 <div class="footer-social">
                     <div class="col-lg-12 text-center">
-                        <span><i class="icon-facebook"></i></span>
-                        <a href="https://www.facebook.com/pages/Cristina-Angarola-Showroom/338336386944"><img src="http://cristinaangarola.com/wp-content/themes/cristina-angarola/images/facebook.png" width="28" height="27" alt=""></a>
-                        <a href="https://instagram.com/cristinaangarolashowroom"><img src="http://cristinaangarola.com/wp-content/themes/cristina-angarola/images/instagram.png" width="29" height="28" alt=""></a>
+                        <span>
+                            <a href="https://www.facebook.com/pages/Cristina-Angarola-Showroom/338336386944"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com/cristinaangarolashowroom"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                        </span>
                     </div>
                 </div>
-                <div class="col-lg-12 text-center">
-                    <p>860 S Los Angeles St Suite 400, Los Angeles, CA 90014</p>
+                <div class="footer-desktop">
+                    <div class="col-sm-4 text-center custom-right"><p>T: (213)-489-0072</p></div>
+                    <div class="col-sm-4 text-center">
+                        <p>860 S Los Angeles St Suite 400, Los Angeles, CA 90014</p>
+                    </div>
+                    <div class="col-sm-4 text-center custom-left"><p>F: (213)-489-2035</p></div>
                 </div>
-                <div class="col-lg-6 text-center custom-right"><p>T. 213-489-0072</p></div>
-                <div class="col-lg-6 text-center custom-left"><p>F. 213-489-2035</p></div>
+                <div class="footer-mobile">
+                    <div class="col-lg-12 text-center">
+                        <p>860 S Los Angeles St Suite 400, Los Angeles, CA 90014</p>
+                    </div>
+                    <div class="col-lg-6 text-center"><p>T: (213)-489-0072</p></div>
+                    <div class="col-lg-6 text-center custom-left"><p>F: (213)-489-2035</p></div>
+                </div>
             </div>
         </footer>
-    </div>
-    
-    @*@Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)*@
 
-    <script src="~/Scripts/vendor/angular.min.js"></script>
-    <script src="~/Scripts/vendor/jquery-3.1.0.js"></script>
-    <script src="~/Scripts/vendor/ng-file-upload-all.min.js"></script>
 
-    <script src="~/Scripts/dist/controllers/BrandsController.js"></script>
-    <script src="~/Scripts/dist/services/BrandService.js"></script>
-    <script src="~/Scripts/dist/app.js"></script>
-</body>
+
+
+        <script src="~/Scripts/vendor/slick.js"></script>
+        <script src="~/Scripts/vendor/angular.min.js"></script>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.4/angular-touch.js"></script>
+        <script src="~/Scripts/vendor/ng-file-upload-all.min.js"></script>
+        <script src="~/Scripts/vendor/angular-slick.min.js"></script>
+
+        <script src="~/Scripts/dist/controllers/BrandsController.js"></script>
+        <script src="~/Scripts/dist/controllers/BrandsDetailController.js"></script>
+        <script src="~/Scripts/dist/services/BrandService.js"></script>
+        <script src="~/Scripts/dist/controllers/HomeController.js"></script>
+        <script src="~/Scripts/dist/controllers/CalendarController.js"></script>
+        <script src="~/Scripts/dist/services/CalendarService.js"></script>
+        <script src="~/Scripts/dist/app.js"></script>
+    </body>
 </html>
 

@@ -11,22 +11,22 @@
                     <div class="panel-body">
                         <form action="" name="brandsCtlr.form" class="" style="">
                             <div class="form-group">
-                            <h3>Brand Name</h3>
+                                <h3>Brand Name</h3>
                                 <input type="text"
                                        placeholder="Brand Name"
                                        name="brandName"
-                                       ng-model="brandsCtlr.brandName"
+                                       ng-model="brandsCtlr.brand.name"
                                        required />
                                 <div role="alert" class="help-inline error">
                                     <span class="error" ng-show="brandsCtlr.form.brandName.$touched && brandsCtlr.form.brandName.$error.required">
                                         This field is required.
                                     </span>
-                                </div></div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <h3>Brand Description</h3>
-                                <textarea
-                                       name="brandDesc"
-                                       ng-model="brandsCtlr.brandDesc"></textarea>
+                                <textarea name="brandDesc"
+                                          ng-model="brandsCtlr.brand.description"></textarea>
                                 <div role="alert" class="help-inline error">
                                     <span class="error" ng-show="brandsCtlr.form.brandDesc.$touched && brandsCtlr.form.brandDesc.$error.required">
                                         This field is required.
@@ -34,14 +34,51 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="button" ngf-select ng-model="brandsCtlr.form.file" name="image" ngf-pattern="'image/*'"
-                                     ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
-                                     ngf-resize="{width: 100, height: 100}">Select</div>
+                                <h3>Brand Image</h3>
+                                <input type="text"
+                                       name="imageURL"
+                                       placeholder="Image URL"
+                                       ng-model="brandsCtlr.brand.imageURL" />
+                                <div role="alert" class="help-inline error">
+                                    <span class="error" ng-show="brandsCtlr.form.imageURL.$touched && brandsCtlr.form.imageURL.$error.required">
+                                        This field is required.
+                                    </span>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <input type="button" class="btn" placeholder="Submit" ng-click="brandsCtlr.submit()" />
+                                <h3>Lookbook URL</h3>
+                                <input type="text"
+                                       name="lookbookURL"
+                                       placeholder="Lookbook URL"
+                                       ng-model="brandsCtlr.brand.lookbookURL" />
+                                <div role="alert" class="help-inline error">
+                                    <span class="error" ng-show="brandsCtlr.form.lookbookURL.$touched && brandsCtlr.form.lookbookURL.$error.required">
+                                        This field is required.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h3>Linesheet URL</h3>
+                                <input type="text"
+                                       name="linesheetURL"
+                                       placeholder="Linesheet URL"
+                                       ng-model="brandsCtlr.brand.linesheetURL" />
+                                <div role="alert" class="help-inline error">
+                                    <span class="error" ng-show="brandsCtlr.form.linesheetURL.$touched && brandsCtlr.form.linesheetURL.$error.required">
+                                        This field is required.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-primary" value="Submit" ng-click="brandsCtlr.submit()" />
                             </div>
                         </form>
+
+                        <input type="button" class="btn btn-danger" ng-click="brandsCtlr.getById()" />
+
+                        <input type="button" class="btn btn-danger" value="update" ng-click="brandsCtlr.update()" />
+
+                        <input type="button" class="btn btn-primary" value="delete" ng-click="brandsCtlr.delete()" />
                     </div>
                 </div>
             </div>

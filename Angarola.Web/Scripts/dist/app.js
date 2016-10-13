@@ -1,12 +1,12 @@
 ﻿(function () {
     "use strict";
 
-
-
-
-
-    angular.module('casAPP', ['ngFileUpload'])
+    angular.module('casAPP', ['ngFileUpload', 'slickCarousel'])
         .controller("brandsController", BrandsController)
-        .service('brandService', BrandService);
+        .controller("homeController", HomeController)
+        .controller('calendarController', CalendarController)
+        .controller('brandsDetailController', BrandsDetailController)
+        .service('brandService', BrandService)
+        .service('calendarService', CalendarService);
 
 })();

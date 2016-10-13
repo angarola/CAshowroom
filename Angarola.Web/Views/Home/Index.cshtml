@@ -2,3 +2,13 @@
     ViewBag.Title = "Cristina Angarola Showroom";
 }
 
+<div ng-controller="homeController as homeCtrl" ng-cloak>
+
+    <slick class="slick-slider col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" settings="homeCtrl.slickConfig" ng-if="homeCtrl.slickConfigLoaded">
+        <div ng-repeat="brand in homeCtrl.brands" style="text-align: center">
+            <a href="Brands/{{brand.id}}"><img ng-src="{{brand.imageURL}}" style="margin-left: auto; margin-right: auto" class="slickImage"></a>
+        </div>
+    </slick>
+
+
+</div>
