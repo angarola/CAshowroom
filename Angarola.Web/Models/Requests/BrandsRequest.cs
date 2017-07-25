@@ -12,5 +12,6 @@ namespace Angarola.Web.Models.Requests
         public string ImageURL { get; set; }
         public string LookbookURL { get; set; }
         public string LinesheetURL { get; set; }
+        public string WebsiteURL { get; set; }
     }
 }

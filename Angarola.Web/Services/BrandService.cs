@@ -21,6 +21,7 @@ namespace Angarola.Web.Services
                    paramCollection.AddWithValue("@ImageURL", model.ImageURL);
                    paramCollection.AddWithValue("@LookbookURL", model.LookbookURL);
                    paramCollection.AddWithValue("@LinesheetURL", model.LinesheetURL);
+                   paramCollection.AddWithValue("@WebsiteURL", model.WebsiteURL);
 
                    SqlParameter p = new SqlParameter("@Id", SqlDbType.Int);
                    p.Direction = ParameterDirection.Output;
@@ -47,6 +48,7 @@ namespace Angarola.Web.Services
                     paramCollection.AddWithValue("@ImageURL", model.ImageURL);
                     paramCollection.AddWithValue("@LookbookURL", model.LookbookURL);
                     paramCollection.AddWithValue("@LinesheetURL", model.LinesheetURL);
+                    paramCollection.AddWithValue("@WebsiteURL", model.WebsiteURL);
                 }
                 );
         }
@@ -110,6 +112,7 @@ namespace Angarola.Web.Services
             x.ImageURL = reader.GetSafeString(colpos++);
             x.LookbookURL = reader.GetSafeString(colpos++);
             x.LinesheetURL = reader.GetSafeString(colpos++);
+            x.WebsiteURL = reader.GetSafeString(colpos++);
 
             return x;
         }

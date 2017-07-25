@@ -1,4 +1,31 @@
-﻿
+﻿/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
 body {
     padding-top: 25px;
     padding-bottom: 20px;
@@ -54,13 +81,6 @@ i {
     color: #404040;
 }
 
-.brand-title {
-    font-family: futura-medium;
-    font-size: 2.5em;
-    color: #404040;
-    margin-top: .5em;
-}
-
 .contact-link {
     text-decoration: underline;
 }
@@ -72,7 +92,7 @@ i {
 
 @media (max-width: 480px) {
     .slickImage {
-        max-height: 250px;
+        max-height: 190px;
     }
 }
 
@@ -104,11 +124,6 @@ footer {
     /*color: #959595;*/
 }
 
-.brand-link {
-    font-family: futura-medium;
-    font-size: 1.5em;
-}
-
 /* Footer displays mobile vs desktop */
 
 @media (max-width: 767px) {
@@ -129,5 +144,35 @@ footer {
 
     .footer-mobile {
         display: none !important;
+    }
+}
+
+
+
+/* ================================================================ */
+/* --- Brands Page */
+/* ================================================================ */
+.brands-page .grid-sizer {
+    width: 50%;
+}
+
+.brands-page .brand-link {
+    font-family: futura-medium;
+    font-size: 1.5em;
+
+    display: block;
+}
+
+.brand-title {
+    font-family: futura-medium;
+    font-size: 2.5em;
+    color: #404040;
+    margin-top: .5em;
+}
+
+@media (max-width: 767px) {
+
+    .brands-page .masonry-brick {
+        position: static !important;
     }
 }

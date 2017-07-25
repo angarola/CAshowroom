@@ -14,6 +14,12 @@
 
 
         this.render();
+
+        this.masonryOptions = {
+            columnWidth: '.grid-sizer',
+            itemSelector: '.grid-item',
+            percentPosition: true
+        };
     }
 
     BrandsController.prototype.render = function () {

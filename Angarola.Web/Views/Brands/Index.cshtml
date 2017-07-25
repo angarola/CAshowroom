@@ -4,15 +4,14 @@
 }
 
 
-<div ng-controller="brandsController as brandsCtlr">
-    <div class="col-sm-12">
-        <div ng-repeat="brand in brandsCtlr.brandList">
-            <div class="col-sm-6 col-sm-offset-0">
-                <a class="brand-link" href="Brands/{{brand.id}}">
-                    <img ng-src="{{brand.imageURL}}" style="width: 100%" />
-                    <p class="brand-link" ng-bind="brand.name"></p>
-                </a>
-            </div>
+<div ng-controller="brandsController as brandsCtlr" class="brands-page">
+    <div class="cf masonry-ctr" masonry="brandsCtlr.masonryOptions" preserve-order load-images="true">
+        <div class="grid-sizer"></div>
+        <div ng-repeat="brand in brandsCtlr.brandList" class="col-sm-6 col-sm-offset-0 grid-item masonry-brick">
+            <a class="brand-link" href="Brands/{{brand.id}}">
+                <img ng-src="{{brand.imageURL}}" style="width: 100%" />
+                <p class="brand-link" ng-bind="brand.name"></p>
+            </a>
         </div>
     </div>
 </div>

@@ -11,10 +11,10 @@
         <div class="col-sm-12 col-md-8 col-md-offset-2">
             <img ng-src="{{detailCtlr.brand.imageURL}}" style="width: 100%;" />
             <p class="brand-title" ng-bind="detailCtlr.brand.name"></p>
-            <p class="brand-url" ng-bind="detailCtlr.brand.url"></p>
             <p class="brand-text" ng-bind="detailCtlr.brand.description"></p>
-            <a ng-if="detailCtlr.brand.lookbookURL" href="{{detailCtlr.brand.lookbookURL}}"><h2>Lookbook</h2></a>
-            <a ng-if="detailCtlr.brand.linesheetURL" href="{{detailCtlr.brand.linesheetURL}}"><h2>Linesheet</h2></a>
+            <a ng-if="detailCtlr.brand.websiteURL" href="{{detailCtlr.brand.websiteURL}}"><h2>View Their Website</h2></a>
+            <a ng-if="detailCtlr.brand.lookbookURL" href="{{detailCtlr.brand.lookbookURL}}"><h2>View Lookbook</h2></a>
+            <a ng-if="detailCtlr.brand.linesheetURL" href="{{detailCtlr.brand.linesheetURL}}"><h2>View Linesheet</h2></a>
         </div>
 
     </div>

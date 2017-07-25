@@ -291,6 +291,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\vendor\angular-masonry-directive.js" />
+    <Content Include="Scripts\vendor\angular-masonry.min.js" />
     <Content Include="Scripts\vendor\angular-slick.min.js" />
     <Content Include="Scripts\vendor\ng-file-upload-all.min.js" />
     <Content Include="Scripts\vendor\angular.min.js" />
